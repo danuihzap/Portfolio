@@ -1,0 +1,176 @@
+body
+{
+    font-family: 'Lemonada', cursive;
+}
+img 
+{
+    height: 5em;
+    max-height: 150px;
+    border-radius: 50%;
+}
+.flip-card {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+  /* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+  /* Style the back side */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 0%;
+    height: 130%;
+    border-radius: 0 80% 0 30%;
+    background: antiquewhite;
+    transition: 2s;
+    z-index: -1;
+}
+.header{
+    color: antiquewhite;
+    transition: 2s;
+    position: relative;
+    overflow: hidden;
+}
+.header:hover{
+    color: black;
+}
+.header:hover::before{
+    width: 100%;
+}
+.card-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    border-radius: 0 0 50% 50%;
+    background: antiquewhite;
+    transition: 0.8s;
+    z-index: -1;
+}
+.card-header{
+    color: antiquewhite;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-header:hover{
+    color: black;
+}
+.card-header:hover::before{
+    height: 180%;
+}
+.card-body::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    border-radius: 100% 0 0 0;
+    background: black;
+    transition: 2s;
+    z-index: -1;
+}
+.card-body{
+    color: black;
+    transition: 2s;
+    position: relative;
+    overflow: hidden;
+}
+.card-body:hover{
+    color: antiquewhite;
+}
+.card-body:hover::before{
+    width: 150%;
+    height: 150%;
+}
+.card-body:hover .hidden-border{
+    height: 3px;
+    width: 94%;
+}
+.hidden-border{
+    top: -4px;
+    left: 3%;
+    height:0%;
+    width:0%;
+    background-color: antiquewhite;
+    transition: 2s;
+    position: relative;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+    left:-30px;
+    position: relative;
+}
+.isi-list{
+    left: 24px;
+    position: relative;
+    bottom: 1px;
+    top: 0px;
+}
+p,li,h6{
+    font-size: 15px;
+}
+.gap{
+    bottom: 0px;
+}
+h6:hover,li:hover,p:hover,h1:hover{
+    text-shadow: 1px 1px 1px darkgrey;
+}
+.isi:hover{
+    top:-5px;
+    position: relative;
+}
+.icon
+{
+    height: 20px;
+    margin-right: 5px;
+}
+.icon:hover{
+    height: 25px;
+}
+.rata-kiri1{
+    left: 5px;
+    position: relative;
+}
+.rata-kiri2{
+    left: -18px;
+    position: relative;
+}
